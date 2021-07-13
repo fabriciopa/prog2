@@ -17,6 +17,15 @@ def listar(agenda):
         print("Email: "+contato["email"])
         print("Telefone: "+contato["telefone"])
 
+def buscar(agenda):
+    termo = input("Digite o termo que você gostaria de buscar: ")
+    for index, contato in enumerate(agenda):
+        if (contato['nome'].find(termo) + contato['email'].find(termo) + contato['telefone'].find(termo))>=-2:
+            print("Contato "+str(index)+":")
+            print("Nome completo: "+contato["nome"])
+            print("Email: "+contato["email"])
+            print("Telefone: "+contato["telefone"])
+
 def menu():
     opcao = None #null, void
     while opcao != "6":
