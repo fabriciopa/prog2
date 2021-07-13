@@ -2,6 +2,14 @@
 #contato: dicionario
 agenda = [] #lista
 
+def incluir(agenda):
+    contato = {} #dicionario
+    contato["nome"] = input("Digite o Nome Completo: ")
+    contato["email"] = input("Digite o Email: ")
+    contato["telefone"] = input("Digite o Telefone: ")
+    #adiciona um contato a agenda
+    agenda.append(contato)
+
 def menu():
     opcao = None #null, void
     while opcao != "6":
