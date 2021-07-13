@@ -9,6 +9,13 @@ def incluir(agenda):
     contato["telefone"] = input("Digite o Telefone: ")
     #adiciona um contato a agenda
     agenda.append(contato)
+    
+def listar(agenda):
+    for index, contato in enumerate(agenda):
+        print("Contato "+str(index)+":")
+        print("Nome completo: "+contato["nome"])
+        print("Email: "+contato["email"])
+        print("Telefone: "+contato["telefone"])
 
 def menu():
     opcao = None #null, void
